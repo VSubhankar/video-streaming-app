@@ -516,3 +516,45 @@ iframe {
   color: white;
   font-size: 1rem;
 }
+/* Mobile Styles */
+@media only screen and (max-width: 600px) {
+  .limiter {
+      width: 100%;
+  }
+
+  .navbar {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .brand {
+      margin-bottom: 10px;
+  }
+
+  .container-login100 {
+      padding-top: 50px;
+  }
+
+  .login100-pic {
+      margin-bottom: 30px;
+  }
+
+  .login100-form {
+      padding: 20px;
+  }
+
+  .input100 {
+      font-size: 14px;
+      padding: 10px;
+  }
+
+  .container-login100-form-btn {
+      margin-top: 20px;
+  }
+  .brandname{
+    display: none;
+  }
+  .symbol-input100{
+    display: none;
+  }
+}

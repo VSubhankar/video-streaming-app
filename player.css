@@ -233,11 +233,6 @@ button {
     width: 750px !important;
   }
 
-  video {
-    width: 750px !important;
-    height: 40vh !important;
-  }
-
   .right, .right_content {
     width: 768px !important;
     padding-right: 50px;
@@ -254,4 +249,24 @@ button {
     height: 100%;
     object-fit: cover;
   }
+  #navbar{
+    display: none;
+  }
+  .video_items video {
+    max-width: calc(100% - 20px); /* 10px padding on left and right */
+    width: 90%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    margin: 10px 0; /* Adjust margin as needed */
+  }
+  .video_items.vide_sidebar.flex{
+    width: 80%;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+.details span{
+  color: black;
+  font-weight: bold;
 }

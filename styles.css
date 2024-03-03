@@ -110,7 +110,7 @@ body {
 float: right;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"); */
 
 *, ::before, ::after {
   box-sizing: border-box;
@@ -157,7 +157,6 @@ header .search {
   padding: 7px 12px;
   background-color: #121212;
   border-radius: 4px;
-  width: 500px;
 }
 
 header input {
@@ -454,9 +453,9 @@ header .toggle {
     padding-left: 0;
   }
 
-  .nav:hover {
+  /* .nav:hover {
     width: 265px;
-  }
+  } */
 
   .nav .nav_subititle,
   .nav .logo_name,
@@ -467,13 +466,13 @@ header .toggle {
     transition: 0.5s;
   }
 
-  .nav:hover .nav_subititle,
+  /* .nav:hover .nav_subititle,
   .nav:hover .logo_name,
   .nav:hover .nav_dropdown-icon,
   .nav:hover .navtop .nav_link:nth-child(4),
   .nav:hover .subscribe-contain {
     opacity: 1;
-  }
+  } */
 
   .grid {
     display: grid;
@@ -482,36 +481,13 @@ header .toggle {
   }
 }
 
+.logo_name {
+  display: none; /* Hide the logo_name by default */
+}
 
-@media screen and (max-width:420px) {
-  header .search {
-    width: 10%;
-  }
-  .video_items .heading {
-    width: 100%; /* Set the width to 100% so that the text wraps */
-    color: #000; /* Change font color to black */
-  }
-
-  header .none,
-  header .img {
-    width: 10px;
-    height: 10px;
-  }
-
-  .grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  main {
-    padding-top: 20px;
-    padding-left: 50px;
-  }
-  .search{
-    width: 200px;
-  }
-  img{
-    padding-left: 100px;
-  }
+.nav.show-menu .logo_name {
+  display: flex; /* Show the logo_name when the show-menu class is present */
+  align-items: center; /* Align center for better appearance */
 }
 
 @media screen and (min-width:1080px) {
@@ -524,4 +500,99 @@ header .toggle {
 
 .heading span{
   color: #fff;
+}
+
+/* Add this at the end of your existing CSS file or in a new one */
+.nav.show-menu {
+  width: 265px; /* Set the width when 'show-menu' class is present */
+}
+
+
+/* Mobile Styles */
+@media screen and (max-width: 767px) {
+  body {
+    padding: 16px;
+  }
+  header {
+    padding: 0 16px;
+  }
+
+  header .header_container {
+    height: 56px;
+    width: 80%;
+  }
+
+  header .search {
+    width: 100%;
+    padding: 8px;
+  }
+
+
+  header .search input {
+    width: 100%;
+  }
+
+  header .img {
+    width: 35px;
+    height: 35px;
+  }
+  .btn.btn-success {
+    font-size: small;
+  }
+
+  .video_items{
+    align-items: center;
+    text-align: center;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0; /* Initially keep the navbar to the left */
+    width: 72px; /* Adjust the initial width as needed */
+    height: 100vh;
+    padding: 16px 16px 0;
+    background: #1c1c1c;
+    box-shadow: 1px 0 0 rgba(22, 8, 43, 0.1);
+    z-index: 100;
+    transition: width 0.5s; /* Transition only the width property */
+  }
+  
+  .nav.show-menu {
+    width: 250px; /* Adjust the expanded width as needed */
+  }
+  
+  .nav_container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 48px;
+    overflow: auto;
+    scrollbar-width: none;
+  }
+   
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+  }
+
+  main {
+    padding-top: 20px;
+    padding-left: 16px;
+  }
+
+  .video_items .heading {
+    text-align: center;
+    color: #000;
+  }
+  .details{
+    margin-left: 10%;
+  }
+
+  img {
+    padding-left: 0;
+  }
 }
