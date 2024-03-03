@@ -255,6 +255,7 @@ button {
   .video_items video {
     max-width: calc(100% - 20px); /* 10px padding on left and right */
     width: 90%;
+    height: max-content;
     padding-bottom: 56.25%; /* 16:9 aspect ratio */
     margin: 10px 0; /* Adjust margin as needed */
   }
